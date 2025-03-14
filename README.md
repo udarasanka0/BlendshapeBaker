@@ -15,8 +15,7 @@ A Maya tool for converting animation into blendshapes.
 1. Download `blendshape_baker.py` and `blendshapebaker.png`.
 2. Save it in your maya scripts folder
    Windows: C:\Users\YourUsername\Documents\maya\scripts\
-   Mac: /Users/YourUsername/Library/Preferences/Autodesk/maya/scripts/
-   Linux: ~/maya/scripts/
+   
 4. Open the Script Editor, Switch to python and enter the following code
    
    import blendshape_baker
