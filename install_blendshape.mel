@@ -1,0 +1,34 @@
+// Maya MEL Installer Script
+global proc installBlendshapeBaker()
+{
+    string $scriptPath = `internalVar -usd`; // User Scripts Directory
+    string $iconPath = `internalVar -upi`; // User Icons Directory
+
+    // Copy Script
+    string $srcScript = `fileDialog -m 1 -dm "*.py"`; // Ask user for script location
+    string $dstScript = $scriptPath + "blendshape_baker.py";
+    sysFile -copy $srcScript $dstScript;
+
+    // Copy Icon
+    string $srcIcon = `fileDialog -m 1 -dm "*.png"`; // Ask user for icon location
+    string $dstIcon = $iconPath + "blendshape_icon.png";
+    sysFile -copy $srcIcon $dstIcon;
+
+    // Add Shelf Button
+    if (!`shelfLayout -ex "CustomShelf"`)
+    {
+        shelfLayout -p "MayaWindow" "CustomShelf";
+    }
+
+    shelfButton 
+        -parent "CustomShelf"
+        -annotation "Blendshape Baker Tool"
+        -image "blendshape_icon.png"
+        -command "python(\"import blendshape_baker; blendshape_baker.run()\")"
+        -label "BlendshapeBaker";
+
+    confirmDialog -title "Installation Complete" -message "Blendshape Baker Installed! Restart Maya.";
+}
+
+// Run Installer
+installBlendshapeBaker();
