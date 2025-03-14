@@ -19,12 +19,15 @@ A Maya tool for converting animation into blendshapes.
 4. Open the Script Editor, Switch to python and enter the following code
    
    import blendshape_baker
+   
    blendshape_baker.show_ui()
+   
+
 
    Select the text and middle-mouse drag it to a shelf (Custom, Animation, or a new shelf).
 
-5. Right-click the new shelf button → Click Edit.
-6. Change the icon if needed, and rename it (e.g., "Blendshape Baker").
+6. Right-click the new shelf button → Click Edit.
+7. Change the icon if needed, and rename it (e.g., "Blendshape Baker").
 
    If you want the tool to be available every time Maya starts, follow these steps:
 
