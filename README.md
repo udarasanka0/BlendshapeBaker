@@ -27,6 +27,15 @@ A Maya tool for converting animation into blendshapes.
 5. Right-click the new shelf button → Click Edit.
 6. Change the icon if needed, and rename it (e.g., "Blendshape Baker").
 
+   If you want the tool to be available every time Maya starts, follow these steps:
+
+Open userSetup.py (or create it if missing) in the Maya scripts folder:
+
+Windows: C:\Users\YourUsername\Documents\maya\scripts\userSetup.py
+
+Add the following
+import blendshape_baker
+
 
 ## 📌 Features
 - Converts animations/Deformers/Alembic cache(Same topology)/Simulation effect  to blendshapes.
